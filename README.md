@@ -2,7 +2,7 @@
 This repository provides the official code for GeNER that automatically **Ge**nerates **NER** datasets where the needs of NER are specified by users.
 Stay tuned for the code update during December!
 
-* Paper: [Simple Questions Generate Named Entity Recognition Datasets](https://arxiv.org/abs/2112.08808)
+* Paper: [Simple Questions Generate Named Entity Recognition Datasets](https://arxiv.org/abs/2112.08808) (Kim et al., 2021)
 * Phrase retrieval demo & code: [DensePhrases](http://densephrases.korea.ac.kr/), [Github](https://github.com/princeton-nlp/DensePhrases)
 
 ## Reference
