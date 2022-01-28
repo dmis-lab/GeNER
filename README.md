@@ -5,8 +5,9 @@ This repository provides the official code for **GeNER** (an automated dataset *
 
 GeNER allows you to build NER models for specific entity types of interest **without** human-labeled data and and rich dictionaries. The core idea is to **ask simple natural language questions** to an open-domain question answering (QA) system and then **retrieve phrases and sentences**, as shown in the query formulation and retrieval stages in the figure below. Please see our paper ([Simple Questions Generate Named Entity Recognition Datasets](https://arxiv.org/abs/2112.08808)) for details.
 
-<img src="docs/images/overview.PNG" width="85%">
-
+<div align="center">
+      <img src="docs/images/overview.PNG" width="95%">
+</div>
 
 ## Requirements
 
