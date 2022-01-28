@@ -127,7 +127,14 @@ python self-training/run_ner.py \
       --model_type bert \
       --model_name_or_path outputs/{enter GeNER model path here} \
       --output_dir outputs/{enter GeNER model path here} \
-      --learning_rate 1e-5 
+      --num_train_epochs 100 \
+      --per_gpu_train_batch_size 64 \
+      --per_gpu_eval_batch_size 64 \
+      --learning_rate 1e-5 \
+      --do_train \
+      --do_eval \
+      --do_test \
+      --evaluate_during_training
 ```
 
 ## Building NER Models for Your Specific Needs
