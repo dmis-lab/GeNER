@@ -1,0 +1,35 @@
+{
+    "retrieved_path": "data/retrieved/ncbi-disease",
+    "annotated_path": "data/annotated/ncbi-disease",
+    "add_abbreviation": true,
+    "refine_boundary" : true,
+    "subquestion_configs": [
+        {
+            "type": "Disease",
+            "subtype" : "disease",
+            "top_k" : 20000,
+            "split_composite_mention": false,
+            "remove_lowercase_phrase": false,
+            "remove_the": true,
+            "skip_lowercase_ngram": 1
+        },
+        {
+            "type": "Disease",
+            "subtype" : "disorder",
+            "top_k" : 15000,
+            "split_composite_mention": false,
+            "remove_lowercase_phrase": false,
+            "remove_the": true,
+            "skip_lowercase_ngram": 1
+        },
+        {
+            "type": "Disease",
+            "subtype" : "condition",
+            "top_k" : 15000,
+            "split_composite_mention": false,
+            "remove_lowercase_phrase": false,
+            "remove_the": true,
+            "skip_lowercase_ngram": 1
+        }
+    ]
+}

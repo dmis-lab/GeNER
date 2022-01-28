@@ -1,0 +1,35 @@
+{
+    "retrieved_path": "data/retrieved/bc5cdr",
+    "annotated_path": "data/annotated/bc5cdr",
+    "add_abbreviation": true,
+    "refine_boundary": true,
+    "subquestion_configs": [
+        {
+            "type": "Disease",
+            "subtype": "disease",
+            "top_k" : 10000,
+            "split_composite_mention": false,
+            "remove_lowercase_phrase": false,
+            "remove_the": true,
+            "skip_lowercase_ngram": 0
+        },
+        {
+            "type": "Chemical",
+            "subtype": "drug",
+            "top_k" : 10000,
+            "split_composite_mention": false,
+            "remove_lowercase_phrase": false,
+            "remove_the": true,
+            "skip_lowercase_ngram": 0
+        },
+        {
+            "type": "Chemical",
+            "subtype": "chemical compound",
+            "top_k" : 10000,
+            "split_composite_mention": false,
+            "remove_lowercase_phrase": false,
+            "remove_the": true,
+            "skip_lowercase_ngram": 0
+        }
+    ]
+}

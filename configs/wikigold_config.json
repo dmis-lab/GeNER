@@ -1,0 +1,143 @@
+{
+    "retrieved_path": "data/retrieved/wikigold",
+    "annotated_path": "data/annotated/wikigold",
+    "add_abbreviation": true,
+    "refine_boundary" : true,
+    "subquestion_configs": [
+        {
+            "type": "PER",
+            "subtype" : "athlete",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "PER",
+            "subtype" : "musician",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "PER",
+            "subtype" : "actor",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "PER",
+            "subtype" : "director",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "PER",
+            "subtype" : "politician",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "LOC",
+            "subtype" : "city",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "LOC",
+            "subtype" : "country",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "LOC",
+            "subtype" : "state in the USA",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "LOC",
+            "subtype" : "road",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "LOC",
+            "subtype" : "island",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "ORG",
+            "subtype" : "company",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "ORG",
+            "subtype" : "association",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "ORG",
+            "subtype" : "sports team",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "ORG",
+            "subtype" : "band",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        },
+        {
+            "type": "ORG",
+            "subtype" : "institution",
+            "top_k" : 1500,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        }
+    ]
+}

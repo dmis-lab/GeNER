@@ -1,0 +1,18 @@
+{
+    "default_config": 
+    {
+        "query_template" : "Which [TYPE]",
+        "initial_top_k" : 0,
+        "top_k" : 5000,
+        "min_phrase_frequency" : 0,
+        "split_composite_mention": true,
+        "remove_punctuation" : true,
+        "remove_lowercase_phrase": true,
+        "remove_the": true,
+        "min_phrase_length" : 3,
+        "remove_stopword" : true,
+        "remove_subtype" : true,
+        "skip_lowercase_ngram": 1
+    }
+    
+}

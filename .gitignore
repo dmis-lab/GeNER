@@ -1,0 +1,8 @@
+data
+__pycache__
+*.swp
+*.swo
+self_training/__pycache__
+self_training/pretrained_model
+outputs
+*.pyc
