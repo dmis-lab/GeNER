@@ -44,7 +44,7 @@ Using AutoPhrase in the dictionary matching stage usually improves final NER per
 If you are using AutoPhrase to apply Rule 10 (i.e., refining entity boundaries), please check the system requirements in the AutoPhrase repository.
 If you are not using AutoPhrase, set `refine_boundary` to `false` in a configuration file in the `configs` directory.
 
-* [[GitHub](https://github.com/shangjingbo1226/AutoPhrase)][[Paper](https://arxiv.org/abs/1702.04457)]
+* [[GitHub](https://github.com/shangjingbo1226/AutoPhrase)] [[Paper](https://arxiv.org/abs/1702.04457)]
 
 ### Computational Resource
 Please see the resource requirement of DensePhrases and self-training, and check available resources of your machine. 
