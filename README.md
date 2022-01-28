@@ -36,7 +36,7 @@ Run `unzip data.zip` to unpack (pre-processed) NER benchmarks.
 We use DensePhrases and a Wikipedia index precomputed by DensePhrases in order to automatically generate NER datasets.
 After installing [DensePhrases v1.0.0](https://github.com/princeton-nlp/DensePhrases#installation), please download **the DensePhrases model** (<em>densephrases-multi-query-multi</em>) and **the phrase index** (<em>densephrases-multi_wiki-20181220</em>) in the official DensePhrases repository.
 
-* [[GitHub](https://github.com/princeton-nlp/DensePhrases)] [[Paper](https://arxiv.org/abs/2012.12624)]
+* [[GitHub](https://github.com/princeton-nlp/DensePhrases)] [[Paper](https://arxiv.org/abs/2012.12624)] [[Demo](http://densephrases.korea.ac.kr/)]
 
 ### AutoPhrase (Optional)
 
