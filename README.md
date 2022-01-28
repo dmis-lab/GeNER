@@ -36,7 +36,6 @@ See `data/README.md` for more information on data format and references.
 We use DensePhrases and a Wikipedia index precomputed by DensePhrases in order to automatically generate NER datasets.
 Please download **the DensePhrases model** (<em>densephrases-multi-query-multi</em>) and **the phrase index** (<em>densephrases-multi_wiki-20181220</em>) in the official DensePhrases repository.
 
-* Note that GeNER and DensePhrases require different virtual environments. Create another environment when you install DensePhrases.
 * [[GitHub](https://github.com/princeton-nlp/DensePhrases)] [[Paper](https://arxiv.org/abs/2012.12624)]
 
 ### AutoPhrase (Optional)
