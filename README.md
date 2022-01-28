@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ### NER Benchmarks
 
-Run `unzip data.zip` to unpack (pre-processed) NER benchmarks.
+Run `unzip data/benchmarks.zip -d ./data` to unpack (pre-processed) NER benchmarks.
 
 ### QA Model and Phrase Index: DensePhrases
 
