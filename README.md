@@ -136,7 +136,7 @@ python self-training/run_ner.py \
       --do_test \
       --evaluate_during_training
 
-# Note that this hyperparameter setup may not be optimal.
+# Note that this hyperparameter setup may not be optimal. It is recommended to search for more effective hyperparameters, especially the learning rate.
 ```
 
 ## Building NER Models for Your Specific Needs
