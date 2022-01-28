@@ -135,6 +135,8 @@ python self-training/run_ner.py \
       --do_eval \
       --do_test \
       --evaluate_during_training
+
+# Note that this hyperparameter setup may not be optimal.
 ```
 
 ## Building NER Models for Your Specific Needs
@@ -142,6 +144,8 @@ python self-training/run_ner.py \
 The main benefit of GeNER is that you can create NER datasets of new and different entity types you want to extract.
 Suppose you want to extract <em>fighter aircraft</em> names.
 The first thing you have to do is to formulate your needs as natural language questions such as "<em>Which fighter aircraft?</em>."
+At this stage, we recommend using the [DensePhrases demo](http://densephrases.korea.ac.kr/) to manually check the feasibility of your questions.
+If relevant phrases are retrieved well, you can proceed to the next step.
 
 Next, you should make a configuration file (e.g., fighter_aircraft_config.json) and set up its values.
 You can reflect questions you made in the configuration file as follows: `"subtype": "fighter aircraft"`.
