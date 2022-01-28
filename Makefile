@@ -24,7 +24,7 @@ conll-low-param:
 	$(eval PERIOD=300)
 	$(eval HP_LABEL=5.9)
 wikigold-low-param:
-	$(eval DATA_NAME=conll-2003)
+	$(eval DATA_NAME=wikigold)
 	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
 	$(eval MODEL_TYPE=roberta)
 	$(eval MODEL_NAME=roberta-base)
@@ -39,35 +39,15 @@ wikigold-low-param:
 	$(eval TRAIN_BATCH=16)
 	$(eval EVAL_BATCH=32)
 	$(eval REINIT=0)
-	$(eval BEGIN_STEP=900)
+	$(eval BEGIN_STEP=500)
 	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=300)
-	$(eval HP_LABEL=5.9)
-wnut-low-param:
-	$(eval DATA_NAME=conll-2003)
-	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
-	$(eval MODEL_TYPE=roberta)
-	$(eval MODEL_NAME=roberta-base)
-	$(eval LR=1e-5)
-	$(eval WEIGHT_DECAY=1e-4)
-	$(eval EPOCH=50)
-	$(eval SEED=0)
-	$(eval ADAM_EPS=1e-8)
-	$(eval ADAM_BETA1=0.9)
-	$(eval ADAM_BETA2=0.98)
-	$(eval WARMUP=200)
-	$(eval TRAIN_BATCH=16)
-	$(eval EVAL_BATCH=32)
-	$(eval REINIT=0)
-	$(eval BEGIN_STEP=900)
-	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=300)
+	$(eval PERIOD=200)
 	$(eval HP_LABEL=5.9)
 ncbi-low-param:
-	$(eval DATA_NAME=conll-2003)
+	$(eval DATA_NAME=ncbi-disease)
 	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
-	$(eval MODEL_TYPE=roberta)
-	$(eval MODEL_NAME=roberta-base)
+	$(eval MODEL_TYPE=bert)
+	$(eval MODEL_NAME=dmis-lab/biobert-v1.1)
 	$(eval LR=1e-5)
 	$(eval WEIGHT_DECAY=1e-4)
 	$(eval EPOCH=50)
@@ -81,13 +61,13 @@ ncbi-low-param:
 	$(eval REINIT=0)
 	$(eval BEGIN_STEP=900)
 	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=300)
+	$(eval PERIOD=450)
 	$(eval HP_LABEL=5.9)
 bc5cdr-low-param:
-	$(eval DATA_NAME=conll-2003)
+	$(eval DATA_NAME=bc5cdr)
 	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
-	$(eval MODEL_TYPE=roberta)
-	$(eval MODEL_NAME=roberta-base)
+	$(eval MODEL_TYPE=bert)
+	$(eval MODEL_NAME=dmis-lab/biobert-v1.1)
 	$(eval LR=1e-5)
 	$(eval WEIGHT_DECAY=1e-4)
 	$(eval EPOCH=50)
@@ -99,29 +79,9 @@ bc5cdr-low-param:
 	$(eval TRAIN_BATCH=16)
 	$(eval EVAL_BATCH=32)
 	$(eval REINIT=0)
-	$(eval BEGIN_STEP=900)
+	$(eval BEGIN_STEP=500)
 	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=300)
-	$(eval HP_LABEL=5.9)
-chemdner-low-param:
-	$(eval DATA_NAME=conll-2003)
-	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
-	$(eval MODEL_TYPE=roberta)
-	$(eval MODEL_NAME=roberta-base)
-	$(eval LR=1e-5)
-	$(eval WEIGHT_DECAY=1e-4)
-	$(eval EPOCH=50)
-	$(eval SEED=0)
-	$(eval ADAM_EPS=1e-8)
-	$(eval ADAM_BETA1=0.9)
-	$(eval ADAM_BETA2=0.98)
-	$(eval WARMUP=200)
-	$(eval TRAIN_BATCH=16)
-	$(eval EVAL_BATCH=32)
-	$(eval REINIT=0)
-	$(eval BEGIN_STEP=900)
-	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=300)
+	$(eval PERIOD=200)
 	$(eval HP_LABEL=5.9)
 
 low-resource:
@@ -164,9 +124,9 @@ self-training:
 ## Low-resource NER
 conll-low: conll-low-param low-resource self-training
 wikigold-low: wikigold-low-param low-resource self-training
-wnut-low: wnut-low-param low-resource self-training
+#wnut-low: wnut-low-param low-resource self-training # to be updated soon
 ncbi-low: ncbi-low-param low-resource self-training
 bc5cdr-low: bc5cdr-low-param low-resource self-training
-chemdner-low: chemdner-low-param low-resource self-training
+#chemdner-low: chemdner-low-param low-resource self-training # to be updated soon
 
 
