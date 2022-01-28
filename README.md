@@ -97,9 +97,9 @@ bash autophrase/apply_autophrase.sh data/retrieved/conll-2003
 
 #### Dictionary matching
 
-Running `annotate.py` will create `train.json`, `tag_to_id.json`, and `train_hf.json` files in the `data/annotated/conll-2003` directory.
-Only the first two files are used in this repository, especially in the self-training stage. 
-The last JSON file has the same data format as the Hugging Face Transformers library and is provided for your convenience.
+Running `annotate.py` will create `train.json` and `train_hf.json` files in the `data/annotated/conll-2003` directory.
+The first JSON file is used in this repository, especially in the self-training stage. 
+The second one has the same data format as the Hugging Face Transformers library and is provided for your convenience.
 
 ```bash
 python annotate.py --gener_config_path $CONFIG_PATH
