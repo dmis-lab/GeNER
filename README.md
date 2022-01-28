@@ -174,7 +174,7 @@ See `configs/README.md` for detailed descriptions of configuration files.
 
 For subsequent steps (i.e., retrieval, dictionary matching, and self-training), refer to the CoNLL-2003 example described above.
 
-## Reference
+## References
 
 Please cite our paper if you consider GeNER to be related to your work. Thanks!
 
