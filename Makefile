@@ -164,9 +164,9 @@ self-training:
 ## Low-resource NER
 conll-low: conll-low-param low-resource self-training
 wikigold-low: wikigold-low-param low-resource self-training
-#wnut-low: wnut-low-param low-resource self-training # to be updated soon
+wnut-low: wnut-low-param low-resource self-training
 ncbi-low: ncbi-low-param low-resource self-training
 bc5cdr-low: bc5cdr-low-param low-resource self-training
-#chemdner-low: chemdner-low-param low-resource self-training # to be updated soon
+chemdner-low: chemdner-low-param low-resource self-training
 
 
