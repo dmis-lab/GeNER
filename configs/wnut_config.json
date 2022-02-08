@@ -1,0 +1,269 @@
+{
+  "retrieved_path": "data/retrieved/wnut-16",
+  "annotated_path": "data/annotated/wnut-16",
+  "add_abbreviation": true,
+  "refine_boundary": true,
+  "subquestion_configs": [
+    {
+      "type": "person",
+      "subtype": "actor",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "person",
+      "subtype": "politician",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "person",
+      "subtype": "sports player",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "person",
+      "subtype": "author",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "geoloc",
+      "subtype": "country",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "geoloc",
+      "subtype": "city",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "geoloc",
+      "subtype": "state in the USA",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "product",
+      "subtype": "software",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "product",
+      "subtype": "mobile app",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "product",
+      "subtype": "operating system",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "product",
+      "subtype": "car",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "product",
+      "subtype": "smart phone",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "facility",
+      "subtype": "facility",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "facility",
+      "subtype": "cafe",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "facility",
+      "subtype": "restaurant",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "facility",
+      "subtype": "college",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "facility",
+      "subtype": "music venue",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "facility",
+      "subtype": "sports facility",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "company",
+      "subtype": "company",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "company",
+      "subtype": "technology company",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "company",
+      "subtype": "news agency",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "company",
+      "subtype": "magazine",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "sportsteam",
+      "subtype": "sports team",
+      "top_k": 1000,
+      "split_composite_mention": true,
+      "remove_lowercase_phrase": true,
+      "remove_the": true,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "tvshow",
+      "subtype": "tv program",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "movie",
+      "subtype": "movie",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "musicartist",
+      "subtype": "band",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "musicartist",
+      "subtype": "rapper",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "musicartist",
+      "subtype": "musician",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    },
+    {
+      "type": "musicartist",
+      "subtype": "singer",
+      "top_k": 1000,
+      "split_composite_mention": false,
+      "remove_lowercase_phrase": true,
+      "remove_the": false,
+      "skip_lowercase_ngram": 1
+    }
+  ]
+}
