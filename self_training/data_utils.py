@@ -284,24 +284,33 @@ def load_and_cache_examples(args, tokenizer, labels, pad_token_label_id, mode, r
     dataset = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label_ids, all_full_label_ids, all_hp_label_ids, all_ids)
     return dataset
 
-def get_labels(path = None):
-    if path == None :
-        path = ""
-        
-    tag2id_path = os.path.join(path, "tag_to_id.json")
-    if os.path.exists(tag2id_path):
-        labels = []
-        with open(tag2id_path, "r") as f:
-            data = json.load(f)
-            for l, _ in data.items():
-                labels.append(l)
-        if "O" not in labels:
-            labels = ["O"] + labels
-        return labels
-    else:
-        return ["O", "B-LOC", "B-ORG", "B-PER", "B-MISC", "I-PER", "I-MISC", "I-ORG", "I-LOC"]
+def get_labels(args):
+    tag2id_path = os.path.join(args.eval_dir, "tag_to_id.json")
 
-def tag_to_id(path = None):
+    assert(os.path.exists(tag2id_path))
+    
+    labels = []
+    with open(tag2id_path, "r") as f:
+        tag2id = json.load(f)
+
+        if not os.path.exists(os.path.join(args.train_dir, "train.json")) :
+            jsonl_data = [json.loads(line) for line in open(os.path.join(args.train_dir, "train_hf.json")).readlines()]
+
+            train_data = []
+            for d in jsonl_data :
+                train_data.append({
+                    "str_words" : d['tokens'],
+                    "tags" : [tag2id[tag] for tag in d['ner_tags']]
+                })
+
+            json.dump(train_data, open(os.path.join(args.train_dir, "train.json"), "w"))
+
+        for l, _ in tag2id.items():
+            labels.append(l)
+
+    return labels
+
+def tag_to_id(path = None, train_dir=None):
     if path == None :
         path = ""
         
@@ -312,6 +321,7 @@ def tag_to_id(path = None):
         return data
     else:
         return {"O": 0, "B-LOC": 1, "B-ORG": 2, "B-PER": 3, "B-MISC": 4, "I-PER": 5, "I-MISC": 6, "I-ORG": 7, "I-LOC": 8}
+
 
 def get_chunk_type(tok, idx_to_tag):
     """

@@ -21,7 +21,7 @@ conll-low-param:
 	$(eval REINIT=0)
 	$(eval BEGIN_STEP=900)
 	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=300)
+	$(eval PERIOD=450)
 	$(eval HP_LABEL=5.9)
 wikigold-low-param:
 	$(eval DATA_NAME=wikigold)

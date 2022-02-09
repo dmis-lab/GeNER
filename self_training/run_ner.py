@@ -590,7 +590,7 @@ def main():
 
     # Set seed
     set_seed(args)
-    labels = get_labels(args.eval_dir)
+    labels = get_labels(args)
     num_labels = len(labels)
     # Use cross entropy ignore index as padding label id so that only real label ids contribute to the loss later
     pad_token_label_id = CrossEntropyLoss().ignore_index

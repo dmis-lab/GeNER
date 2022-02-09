@@ -6,7 +6,7 @@ import numpy as np
 from collections import Counter
 from tqdm import tqdm
 
-from utils.data_utils import load_gener_config, char2word, get_json_line, convert_to_bond_format
+from utils.data_utils import load_gener_config, char2word, get_json_line
 from utils.norm_utils import add_space, preproc_dictionary
 from utils.labeling_utils import InitialWeakData, EntityTypeSampler, annotate_seqs, split_phrases_by_ngram, apply_autophrase, apply_abbreviations, detect_by_autophrase
 
@@ -177,10 +177,6 @@ def main(args, gener_config):
     with open(os.path.join(gener_config['annotated_path'], 'train_hf.json'), 'w') as g:
         for ex in generated_data:
             g.write(json.dumps(ex) + '\n')
-     
-    # BOND [Liang et al., 2020] data format
-    bond_data, _ = convert_to_bond_format(generated_data)
-    json.dump(bond_data, open(os.path.join(gener_config['annotated_path'], 'train.json'), 'w'))
  
 
 if __name__ == '__main__':
