@@ -97,9 +97,7 @@ bash autophrase/apply_autophrase.sh data/retrieved/conll-2003
 
 #### Dictionary matching
 
-Running `annotate.py` will create `train.json` and `train_hf.json` files in the `data/annotated/conll-2003` directory.
-The first JSON file is used in this repository, especially in the self-training stage. 
-The second one has the same data format as the Hugging Face Transformers library and is provided for your convenience.
+Running `annotate.py` will create `train_hf.json` in the `data/annotated/conll-2003` directory.
 
 ```bash
 python annotate.py --gener_config_path $CONFIG_PATH
@@ -107,7 +105,9 @@ python annotate.py --gener_config_path $CONFIG_PATH
 
 #### Self-training
 
-Finally, you can get the final NER model and see its performance. The model and training logs are stored in the `./outputs` directory. See the Makefile file for running experiments on other benchmarks.
+Finally, you can get the final NER model and see its performance. 
+Running `make conll-low` creates the `train.json` file in the `data/annotated/conll-2003` directory, which is pre-processed and derived from `train_tf.json`.
+The model and training logs are stored in the `./outputs` directory. See the Makefile file for running experiments on other benchmarks.
 
 ```bash
 make conll-low
