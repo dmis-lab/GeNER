@@ -50,7 +50,7 @@ def load_gener_config(config_path) :
         default_config = json.load(open(default_config_path))
 
         for q_idx, q_dic in enumerate(config['subquestion_configs']) :
-            for d_key, d_info in default_config['default_config'].items() :
+            for d_key, d_info in default_config['default'].items() :
                 if d_key not in q_dic.keys() :
                     config['subquestion_configs'][q_idx][d_key] = d_info
     else:
