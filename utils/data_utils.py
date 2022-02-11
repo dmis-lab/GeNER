@@ -44,7 +44,7 @@ def get_json_line(tokenized, token_index_to_tag, line_idx) :
 def load_gener_config(config_path) :
     config = json.load(open(config_path))
 
-    default_config_path = config_path.replace(os.path.basename(config_path), 'default_config.json')
+    default_config_path = config_path.replace(os.path.basename(config_path), 'default.json')
     
     if os.path.exists(default_config_path) :
         default_config = json.load(open(default_config_path))
@@ -54,7 +54,7 @@ def load_gener_config(config_path) :
                 if d_key not in q_dic.keys() :
                     config['subquestion_configs'][q_idx][d_key] = d_info
     else:
-        raise FileNotFoundError("Cannot find the 'default_config.json' file. Add this file to your 'configs' directory.")
+        raise FileNotFoundError("Cannot find the 'default.json' file. Add this file to your 'configs' directory.")
     return config
 
 
