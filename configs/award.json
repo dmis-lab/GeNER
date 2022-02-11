@@ -1,6 +1,6 @@
 {
-    "retrieved_path": "data/retrieved/crossner_award",
-    "annotated_path": "data/annotated/crossner_award",
+    "retrieved_path": "data/retrieved/award",
+    "annotated_path": "data/annotated/award",
     "add_abbreviation": true,
     "refine_boundary" : true,
     "subquestion_configs": [
