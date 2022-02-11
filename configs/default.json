@@ -1,5 +1,5 @@
 {
-    "default_config": 
+    "default": 
     {
         "query_template" : "Which [TYPE]",
         "initial_top_k" : 0,
