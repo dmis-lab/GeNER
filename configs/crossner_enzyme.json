@@ -1,0 +1,17 @@
+{
+    "retrieved_path": "data/retrieved/crossner_enzyme",
+    "annotated_path": "data/annotated/crossner_enzyme",
+    "add_abbreviation": true,
+    "refine_boundary" : true,
+    "subquestion_configs": [
+        {
+            "type": "enzyme",
+            "subtype": "enzyme",
+            "top_k": 5000,
+            "split_composite_mention": true,
+            "remove_lowercase_phrase": false,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 0
+        }
+    ]
+}

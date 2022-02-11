@@ -1,0 +1,17 @@
+{
+    "retrieved_path": "data/retrieved/crossner_astronomical_object",
+    "annotated_path": "data/annotated/crossner_astronomical_object",
+    "add_abbreviation": true,
+    "refine_boundary" : true,
+    "subquestion_configs": [
+        {
+            "type": "astronomicalobject",
+            "subtype": "astronomical object",
+            "top_k": 5000,
+            "split_composite_mention": false,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        }
+    ]
+}

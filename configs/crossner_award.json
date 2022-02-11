@@ -1,0 +1,17 @@
+{
+    "retrieved_path": "data/retrieved/crossner_award",
+    "annotated_path": "data/annotated/crossner_award",
+    "add_abbreviation": true,
+    "refine_boundary" : true,
+    "subquestion_configs": [
+        {
+            "type": "award",
+            "subtype": "award",
+            "top_k": 10000,
+            "split_composite_mention": false,
+            "remove_lowercase_phrase": true,
+            "remove_the": true,
+            "skip_lowercase_ngram" : 1
+        }
+    ]
+}

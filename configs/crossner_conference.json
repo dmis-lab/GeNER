@@ -1,0 +1,18 @@
+{
+    "retrieved_path": "data/retrieved/crossner_conference",
+    "annotated_path": "data/annotated/crossner_conference",
+    "save_file": "conference",
+    "add_abbreviation": true,
+    "refine_boundary" : true,
+    "subquestion_configs": [
+        {
+            "type": "conference",
+            "subtype": "conference on artificial intelligence",
+            "top_k": 5000,
+            "split_composite_mention": false,
+            "remove_lowercase_phrase": true,
+            "remove_the": false,
+            "skip_lowercase_ngram" : 1
+        }
+    ]
+}
