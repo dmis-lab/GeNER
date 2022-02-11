@@ -145,7 +145,7 @@ enzyme-fine-param:
 	$(eval PERIOD=700)
 	$(eval HP_LABEL=5.9)
 astronomical-fine-param:
-	$(eval DATA_NAME=astronomical_object)
+	$(eval DATA_NAME=astronomicalobject)
 	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
 	$(eval MODEL_TYPE=roberta)
 	$(eval MODEL_NAME=dmis-lab/roberta-base)
