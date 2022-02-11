@@ -1,6 +1,6 @@
 {
-    "retrieved_path": "data/retrieved/astronomical_object",
-    "annotated_path": "data/annotated/astronomical_object",
+    "retrieved_path": "data/retrieved/astronomicalobject",
+    "annotated_path": "data/annotated/astronomicalobject",
     "add_abbreviation": true,
     "refine_boundary" : true,
     "subquestion_configs": [
