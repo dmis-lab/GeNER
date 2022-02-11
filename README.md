@@ -71,7 +71,7 @@ Running `retrieve.py` will create `*.json` and `*.raw` files in the `data/retrie
 ```bash
 export CUDA_VISIBLE_DEVICES=0
 export DENSEPHRASES_PATH={enter your densephrases path here}
-export CONFIG_PATH=./configs/conll_config.json
+export CONFIG_PATH=./configs/conll-2003.json
 
 python retrieve.py \
       --run_mode eval \
