@@ -1,6 +1,6 @@
 {
-    "retrieved_path": "data/retrieved/crossner_conference",
-    "annotated_path": "data/annotated/crossner_conference",
+    "retrieved_path": "data/retrieved/conference",
+    "annotated_path": "data/annotated/conference",
     "save_file": "conference",
     "add_abbreviation": true,
     "refine_boundary" : true,
