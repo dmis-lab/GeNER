@@ -123,8 +123,29 @@ chemdner-low-param:
 	$(eval LABEL_MODE=soft)
 	$(eval PERIOD=600)
 	$(eval HP_LABEL=5.9)
-crossner_astronomical_object-fine-param:
-	$(eval DATA_NAME=crossner_astronomical_object)
+
+enzyme-fine-param:
+	$(eval DATA_NAME=enzyme)
+	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
+	$(eval MODEL_TYPE=roberta)
+	$(eval MODEL_NAME=dmis-lab/roberta-base)
+	$(eval LR=1e-5)
+	$(eval WEIGHT_DECAY=1e-4)
+	$(eval EPOCH=50)
+	$(eval SEED=0)
+	$(eval ADAM_EPS=1e-8)
+	$(eval ADAM_BETA1=0.9)
+	$(eval ADAM_BETA2=0.98)
+	$(eval WARMUP=200)
+	$(eval TRAIN_BATCH=16)
+	$(eval EVAL_BATCH=32)
+	$(eval REINIT=0)
+	$(eval BEGIN_STEP=350)
+	$(eval LABEL_MODE=soft)
+	$(eval PERIOD=700)
+	$(eval HP_LABEL=5.9)
+astronomical-fine-param:
+	$(eval DATA_NAME=astronomical_object)
 	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
 	$(eval MODEL_TYPE=roberta)
 	$(eval MODEL_NAME=dmis-lab/roberta-base)
@@ -143,8 +164,8 @@ crossner_astronomical_object-fine-param:
 	$(eval LABEL_MODE=soft)
 	$(eval PERIOD=300)
 	$(eval HP_LABEL=5.9)
-crossner_award-fine-param:
-	$(eval DATA_NAME=crossner_award)
+award-fine-param:
+	$(eval DATA_NAME=award)
 	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
 	$(eval MODEL_TYPE=roberta)
 	$(eval MODEL_NAME=dmis-lab/roberta-base)
@@ -163,8 +184,8 @@ crossner_award-fine-param:
 	$(eval LABEL_MODE=soft)
 	$(eval PERIOD=400)
 	$(eval HP_LABEL=5.9)
-crossner_conference-fine-param:
-	$(eval DATA_NAME=crossner_conference)
+conference-fine-param:
+	$(eval DATA_NAME=conference)
 	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
 	$(eval MODEL_TYPE=roberta)
 	$(eval MODEL_NAME=dmis-lab/roberta-base)
@@ -182,26 +203,6 @@ crossner_conference-fine-param:
 	$(eval BEGIN_STEP=200)
 	$(eval LABEL_MODE=soft)
 	$(eval PERIOD=100)
-	$(eval HP_LABEL=5.9)
-crossner_enzyme-fine-param:
-	$(eval DATA_NAME=crossner_enzyme)
-	$(eval TRAIN_ROOT=./data/annotated/$(DATA_NAME))
-	$(eval MODEL_TYPE=roberta)
-	$(eval MODEL_NAME=dmis-lab/roberta-base)
-	$(eval LR=1e-5)
-	$(eval WEIGHT_DECAY=1e-4)
-	$(eval EPOCH=50)
-	$(eval SEED=0)
-	$(eval ADAM_EPS=1e-8)
-	$(eval ADAM_BETA1=0.9)
-	$(eval ADAM_BETA2=0.98)
-	$(eval WARMUP=200)
-	$(eval TRAIN_BATCH=16)
-	$(eval EVAL_BATCH=32)
-	$(eval REINIT=0)
-	$(eval BEGIN_STEP=350)
-	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=700)
 	$(eval HP_LABEL=5.9)
 
 low-resource:
@@ -248,8 +249,10 @@ wnut-low: wnut-low-param low-resource self-training
 ncbi-low: ncbi-low-param low-resource self-training
 bc5cdr-low: bc5cdr-low-param low-resource self-training
 chemdner-low: chemdner-low-param low-resource self-training
-crossner_astronomical_object-fine: crossner_astronomical_object-fine-param fine-grained self-training
-crossner_award-fine: crossner_award-fine-param fine-grained self-training
-crossner_conference-fine: crossner_conference-fine-param fine-grained self-training
-crossner_enzyme-fine: crossner_enzyme-fine-param fine-grained self-training
+
+## Fine-grained NER
+enzyme-fine: enzyme-fine-param fine-grained self-training
+astronomical-fine: astronomical-fine-param fine-grained self-training
+award-fine: award-fine-param fine-grained self-training
+conference-fine: conference-fine-param fine-grained self-training
 
