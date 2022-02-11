@@ -1,6 +1,6 @@
 {
-    "retrieved_path": "data/retrieved/crossner_astronomical_object",
-    "annotated_path": "data/annotated/crossner_astronomical_object",
+    "retrieved_path": "data/retrieved/astronomical_object",
+    "annotated_path": "data/annotated/astronomical_object",
     "add_abbreviation": true,
     "refine_boundary" : true,
     "subquestion_configs": [
