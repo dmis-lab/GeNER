@@ -90,13 +90,7 @@ def evaluate(args, model, tokenizer, labels, pad_token_label_id, best, mode, pre
     for ground_truth_id,predicted_id in zip(out_id_list,preds_id_list):
         # We use the get chunks function defined above to get the true chunks
         # and the predicted chunks from true labels and predicted labels respectively
-
-        if mode == "dev" :
-            data_dir = args.eval_dir
-        elif mode == "test" :
-            data_dir = args.test_dir
-        else :
-            raise ValueError("Evaluation mode is only supported for eval | test.")
+        data_dir = args.eval_dir
         lab_chunks      = set(get_chunks(ground_truth_id, tag_to_id(data_dir)))
         lab_pred_chunks = set(get_chunks(predicted_id, tag_to_id(data_dir)))
 
