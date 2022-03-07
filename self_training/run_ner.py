@@ -325,13 +325,9 @@ def train(args, train_dataset, model, tokenizer, labels, pad_token_label_id):
                             loss - args.mt_beta * mt_loss - args.vat_beta * vat_loss, \
                             args.mt_beta * mt_loss, args.vat_beta * vat_loss)
                         
-                        results, _, best_dev, _ = evaluate(args, model, tokenizer, labels, pad_token_label_id, best_dev, mode="dev", prefix='dev [Step {}/{} | Epoch {}/{}]'.format(global_step, t_total, epoch, args.num_train_epochs), verbose=False)
+                        results, _, best_dev, is_updated = evaluate(args, model, tokenizer, labels, pad_token_label_id, best_dev, mode="dev", prefix='dev [Step {}/{} | Epoch {}/{}]'.format(global_step, t_total, epoch, args.num_train_epochs), verbose=False)
                         for key, value in results.items():
                             tb_writer.add_scalar("eval_{}".format(key), value, global_step)
-
-                        results, _, best_test, is_updated  = evaluate(args, model, tokenizer, labels, pad_token_label_id, best_test, mode="test", prefix='test [Step {}/{} | Epoch {}/{}]'.format(global_step, t_total, epoch, args.num_train_epochs), verbose=False)
-                        for key, value in results.items():
-                            tb_writer.add_scalar("test_{}".format(key), value, global_step)
 
                         output_dirs = []
                         if args.local_rank in [-1, 0] and is_updated:
@@ -678,9 +674,8 @@ def main():
         tokenizer = tokenizer_class.from_pretrained(args.output_dir, do_lower_case=args.do_lower_case)
         model = model_class.from_pretrained(args.output_dir)
         model.to(args.device)
+        best_test = [0, 0, 0]
         
-        if not best_test:
-            best_test = [0, 0, 0]
         result, predictions, _, _ = evaluate(args, model, tokenizer, labels, pad_token_label_id, best=best_test, mode="test")
         # Save results
         output_test_results_file = os.path.join(args.output_dir, "test_results.txt")
