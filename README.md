@@ -123,7 +123,8 @@ We provide a fine-tuning **script** in this repository (`self-training/run_ner.p
 export CUDA_VISIBLE_DEVICES=0
 
 python self-training/run_ner.py \
-      --data_dir data/few-shot/conll-2003/conll-2003_0 \
+      --train_dir data/few-shot/conll-2003/conll-2003_0 \
+      --eval_dir data/few-shot/conll-2003/conll-2003_0 \
       --model_type bert \
       --model_name_or_path outputs/{enter GeNER model path here} \
       --output_dir outputs/{enter GeNER model path here} \
@@ -133,7 +134,7 @@ python self-training/run_ner.py \
       --learning_rate 1e-5 \
       --do_train \
       --do_eval \
-      --do_test \
+      --do_predict \
       --evaluate_during_training
 
 # Note that this hyperparameter setup may not be optimal. It is recommended to search for more effective hyperparameters, especially the learning rate.
