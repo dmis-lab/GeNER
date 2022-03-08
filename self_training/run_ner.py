@@ -647,16 +647,15 @@ def main():
     results = {}
     if args.do_eval and args.local_rank in [-1, 0]:
         tokenizer = tokenizer_class.from_pretrained(args.output_dir, do_lower_case=args.do_lower_case)
-        checkpoints = [args.output_dir]
+        checkpoints = [os.path.join(args.output_dir, "checkpoint-best")]
         if args.eval_all_checkpoints:
             checkpoints = list(
                 os.path.dirname(c) for c in sorted(glob.glob(args.output_dir + "/**/" + WEIGHTS_NAME, recursive=True))
             )
             logging.getLogger("pytorch_transformers.modeling_utils").setLevel(logging.WARN)  # Reduce logging
         logger.info("Evaluate the following checkpoints: %s", checkpoints)
-
-        if not best_dev:
-            best_dev = [0, 0, 0]
+        best_dev = [0, 0, 0]
+            
         for checkpoint in checkpoints:
             global_step = checkpoint.split("-")[-1] if len(checkpoints) > 1 else ""
             model = model_class.from_pretrained(checkpoint)
@@ -672,18 +671,19 @@ def main():
 
     if args.do_predict and args.local_rank in [-1, 0]:
         tokenizer = tokenizer_class.from_pretrained(args.output_dir, do_lower_case=args.do_lower_case)
-        model = model_class.from_pretrained(args.output_dir)
+        model_path = os.path.join(args.output_dir, "checkpoint-best")
+        model = model_class.from_pretrained(model_path)
         model.to(args.device)
         best_test = [0, 0, 0]
         
         result, predictions, _, _ = evaluate(args, model, tokenizer, labels, pad_token_label_id, best=best_test, mode="test")
         # Save results
-        output_test_results_file = os.path.join(args.output_dir, "test_results.txt")
+        output_test_results_file = os.path.join(model_path, "test_results.txt")
         with open(output_test_results_file, "w") as writer:
             for key in sorted(result.keys()):
                 writer.write("{} = {}\n".format(key, str(result[key])))
         # Save predictions
-        output_test_predictions_file = os.path.join(args.output_dir, "test_predictions.txt")
+        output_test_predictions_file = os.path.join(model_path, "test_predictions.txt")
         with open(output_test_predictions_file, "w") as writer:
             with open(os.path.join(args.eval_dir, "test.json"), "r") as f:
                 example_id = 0
