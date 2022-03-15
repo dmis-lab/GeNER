@@ -122,10 +122,10 @@ We provide a fine-tuning **script** in this repository (`self-training/run_ner.p
 ```bash
 export CUDA_VISIBLE_DEVICES=0
 
-python self-training/run_ner.py \
+python self_training/run_ner.py \
       --train_dir data/few-shot/conll-2003/conll-2003_0 \
       --eval_dir data/few-shot/conll-2003/conll-2003_0 \
-      --model_type bert \
+      --model_type roberta \
       --model_name_or_path outputs/{enter GeNER model path here} \
       --output_dir outputs/{enter GeNER model path here} \
       --num_train_epochs 100 \
