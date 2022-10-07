@@ -18,8 +18,8 @@ Please follow the instructions below to set up your environment and install GeNE
 conda create -n GeNER python=3.8
 conda activate GeNER
 
-# Install PyTorch
-conda install pytorch=1.9.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+# Install PyTorch v1.9.0
+pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 
 # Install GeNER
 git clone https://github.com/dmis-lab/GeNER.git
