@@ -54,7 +54,7 @@ If you are not using AutoPhrase, set `refine_boundary` to `false` in a configura
 Please see the resource requirement of DensePhrases and self-training, and check available resources of your machine. 
 
 * **100GB RAM** and **a single 11G GPU** to run DensePhrases 
-* **Single 9G GPU** to perform self-training (based on batch size 16)
+* **Single 6G GPU** to perform self-training (based on batch size 16)
 
 ## Reproducing Experiments
 
