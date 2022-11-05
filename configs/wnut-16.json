@@ -24,7 +24,7 @@
     },
     {
       "type": "person",
-      "subtype": "sports player",
+      "subtype": "athlete",
       "top_k": 1000,
       "split_composite_mention": true,
       "remove_lowercase_phrase": true,
@@ -213,7 +213,7 @@
     },
     {
       "type": "tvshow",
-      "subtype": "tv program",
+      "subtype": "TV show",
       "top_k": 1000,
       "split_composite_mention": false,
       "remove_lowercase_phrase": true,
