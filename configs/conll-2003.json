@@ -6,7 +6,7 @@
     "subquestion_configs": [
         {
             "type": "PER",
-            "subtype" : "sports player",
+            "subtype" : "athlete",
             "top_k" : 5000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
