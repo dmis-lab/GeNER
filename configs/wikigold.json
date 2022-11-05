@@ -7,7 +7,7 @@
         {
             "type": "PER",
             "subtype" : "athlete",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -16,7 +16,7 @@
         {
             "type": "PER",
             "subtype" : "musician",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -25,7 +25,7 @@
         {
             "type": "PER",
             "subtype" : "actor",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -34,7 +34,7 @@
         {
             "type": "PER",
             "subtype" : "director",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -43,7 +43,7 @@
         {
             "type": "PER",
             "subtype" : "politician",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -52,7 +52,7 @@
         {
             "type": "LOC",
             "subtype" : "city",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -61,7 +61,7 @@
         {
             "type": "LOC",
             "subtype" : "country",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -70,7 +70,7 @@
         {
             "type": "LOC",
             "subtype" : "state in the USA",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -79,7 +79,7 @@
         {
             "type": "LOC",
             "subtype" : "road",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -88,7 +88,7 @@
         {
             "type": "LOC",
             "subtype" : "island",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -97,7 +97,7 @@
         {
             "type": "ORG",
             "subtype" : "company",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -106,7 +106,7 @@
         {
             "type": "ORG",
             "subtype" : "association",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -115,7 +115,7 @@
         {
             "type": "ORG",
             "subtype" : "sports team",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -124,7 +124,7 @@
         {
             "type": "ORG",
             "subtype" : "band",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
@@ -133,7 +133,7 @@
         {
             "type": "ORG",
             "subtype" : "institution",
-            "top_k" : 1500,
+            "top_k" : 4000,
             "split_composite_mention": true,
             "remove_lowercase_phrase": true,
             "remove_the": true,
