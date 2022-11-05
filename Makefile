@@ -21,7 +21,7 @@ conll-low-param:
 	$(eval REINIT=0)
 	$(eval BEGIN_STEP=900)
 	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=450)
+	$(eval PERIOD=300)
 	$(eval HP_LABEL=5.9)
 wikigold-low-param:
 	$(eval DATA_NAME=wikigold)
@@ -35,7 +35,7 @@ wikigold-low-param:
 	$(eval ADAM_EPS=1e-8)
 	$(eval ADAM_BETA1=0.9)
 	$(eval ADAM_BETA2=0.98)
-	$(eval WARMUP=200)
+	$(eval WARMUP=300)
 	$(eval TRAIN_BATCH=16)
 	$(eval EVAL_BATCH=32)
 	$(eval REINIT=0)
@@ -81,7 +81,7 @@ ncbi-low-param:
 	$(eval REINIT=0)
 	$(eval BEGIN_STEP=900)
 	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=450)
+	$(eval PERIOD=300)
 	$(eval HP_LABEL=5.9)
 bc5cdr-low-param:
 	$(eval DATA_NAME=bc5cdr)
@@ -121,7 +121,7 @@ chemdner-low-param:
 	$(eval REINIT=0)
 	$(eval BEGIN_STEP=900)
 	$(eval LABEL_MODE=soft)
-	$(eval PERIOD=600)
+	$(eval PERIOD=300)
 	$(eval HP_LABEL=5.9)
 
 enzyme-fine-param:
