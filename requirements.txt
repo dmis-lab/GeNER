@@ -8,7 +8,6 @@ tqdm
 blosc
 ujson
 rouge
-wandb
 nltk
 flask
 flask_cors
