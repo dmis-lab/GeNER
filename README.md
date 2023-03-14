@@ -189,13 +189,20 @@ For subsequent steps (i.e., retrieval, dictionary matching, and self-training), 
 Please cite our paper if you consider GeNER to be related to your work. Thanks!
 
 ```bibtex
-@article{kim2021simple,
-      title={Simple Questions Generate Named Entity Recognition Datasets}, 
-      author={Hyunjae Kim and Jaehyo Yoo and Seunghyun Yoon and Jinhyuk Lee and Jaewoo Kang},
-      year={2021},
-      eprint={2112.08808},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{kim-etal-2022-simple,
+    title = "Simple Questions Generate Named Entity Recognition Datasets",
+    author = "Kim, Hyunjae  and
+      Yoo, Jaehyo  and
+      Yoon, Seunghyun  and
+      Lee, Jinhyuk  and
+      Kang, Jaewoo",
+    booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.emnlp-main.417",
+    pages = "6220--6236"
 }
 ```
 
