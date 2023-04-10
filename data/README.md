@@ -11,8 +11,8 @@ See our paper for details.
 
 We use the same format as that in the [BOND GitHub Repo](https://github.com/cliang1453/BOND/tree/master/dataset) since we use the code base of BOND during self-training and evaluation.
 
-* "str_words": list of input tokens.
-* "tag": list of label indexes, which are defined in the `tag_to_id.json` file.
+* `str_words`: list of input tokens.
+* `tag`: list of label indexes, which are defined in the `tag_to_id.json` file.
 
 ### Statistics
 
